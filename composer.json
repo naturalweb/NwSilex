@@ -1,0 +1,32 @@
+{
+    "name": "naturalweb/nwsilex",
+    "description": "Conjunto de library, para o uso do micro framework silex",
+    "type": "library",
+    "keywords": [
+        "silex", "framework", "naturalweb"
+    ],
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/naturalweb/NwSilex",
+    "authors": [
+        {
+            "name": "Renato Moura",
+            "email": "renato@naturalweb.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "~1.1",
+        "twig/twig": "1.*",
+        "swiftmailer/swiftmailer": "5.0.*",
+        "symfony/browser-kit": "2.4.*",
+        "illuminate/database": "4.1.*",
+        "nesbot/carbon": "1.*",
+        "monolog/monolog": "1.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "NwSilex": "src/"
+        }
+    }
+}
+
