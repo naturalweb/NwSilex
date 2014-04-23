@@ -2,7 +2,7 @@
 namespace NwSilex\Controller;
 
 use NwSilex\Foundation\Application;
-use NwSilex\Foundation\Request;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Abstract Controller
