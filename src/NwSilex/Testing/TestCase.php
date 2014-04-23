@@ -15,7 +15,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
 	/**
 	 * @var Client
 	 */
-	protected $app;
+	protected $client;
 
 	/**
 	 * Setup the test environment.
