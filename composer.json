@@ -23,6 +23,10 @@
         "nesbot/carbon": "1.*",
         "monolog/monolog": "1.7.*"
     },
+    "require-dev" : {
+        "phpmd/phpmd" : "1.4.*",
+        "phpunit/phpunit" : ">=3.7,<4"
+    },
     "autoload": {
         "psr-0": {
             "NwSilex": "src/"
