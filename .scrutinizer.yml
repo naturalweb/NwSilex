@@ -1,0 +1,11 @@
+# .scrutinizer.yml
+imports:
+    - php
+
+tools:
+    php_code_coverage:
+        enabled: true
+        test_command: phpuinit
+
+before_commands:
+    - "composer install --dev --prefer-source"
