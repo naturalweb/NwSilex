@@ -1,12 +1,20 @@
 <?php
 
-namespace NWSilex\Testing;
+namespace NwSilex\Testing;
 
+use NwSilex\Foundation\Application;
 use Symfony\Component\HttpKernel\Client;
-use Symfony\Component\HttpKernel\HttpKernel;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
+	/**
+	 * @var Application
+	 */
+	protected $app;
+
+	/**
+	 * @var Client
+	 */
 	protected $app;
 
 	/**
@@ -39,7 +47,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
 	/**
      * Creates the application.
      *
-     * @return HttpKernel
+     * @return Application
      */
     abstract public function createApplication();
 
