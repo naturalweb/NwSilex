@@ -126,7 +126,6 @@ class Mailer {
 	 *
 	 * @param  \Swift_Message  $message
 	 * @param  string  $view
-	 * @param  string  $plain
 	 * @param  array   $data
 	 * @return void
 	 */
@@ -191,7 +190,9 @@ class Mailer {
 	/**
 	 * Log that a message was sent.
 	 *
-	 * @param  \Swift_Message  $message
+	 * @param  string         $msg
+	 * @param  \Swift_Message $message
+	 * 
 	 * @return void
 	 */
 	protected function logMessage($msg, Swift_Message $message)

@@ -4,7 +4,6 @@ namespace NwSilex\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Container\Container;
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Database\ConnectionResolver;

@@ -66,13 +66,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     /**
 	 * Call the given URI and return the Response.
 	 *
-	 * @param  string  $method
-	 * @param  string  $uri
-	 * @param  array   $parameters
-	 * @param  array   $files
-	 * @param  array   $server
-	 * @param  string  $content
-	 * @param  bool    $changeHistory
 	 * @return \Illuminate\Http\Response
 	 */
 	public function call()
