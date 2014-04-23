@@ -31,7 +31,8 @@ class Request extends SymfonyRequest
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $default
-	 * @return string
+	 * 
+	 * @return string|array
 	 */
 	public function input($key = null, $default = null)
 	{
@@ -43,20 +44,25 @@ class Request extends SymfonyRequest
 	/**
 	 * Get a subset of the items from the input data.
 	 *
-	 * @param  array  $keys
+	 * @param array $keys
+	 * 
 	 * @return array
 	 */
 	public function only($keys)
 	{
 		$keys = is_array($keys) ? $keys : func_get_args();
+		
+		$results = $this->input();
+		$results = is_array($results) ? $results : array();
 
-		return array_only($this->input(), $keys) + array_fill_keys($keys, null);
+		return array_only($results, $keys) + array_fill_keys($keys, null);
 	}
 
 	/**
 	 * Get all of the input except for a specified array of items.
 	 *
-	 * @param  array  $keys
+	 * @param array $keys
+	 * 
 	 * @return array
 	 */
 	public function except($keys)
@@ -64,6 +70,7 @@ class Request extends SymfonyRequest
 		$keys = is_array($keys) ? $keys : func_get_args();
 
 		$results = $this->input();
+		$results = is_array($results) ? $results : array();
 
 		foreach ($keys as $key) array_forget($results, $key);
 
