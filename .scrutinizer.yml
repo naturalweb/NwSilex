@@ -7,3 +7,5 @@ tools:
     php_analyzer: true
     php_pdepend: true
     php_analyzer: true
+    php_sim: true
+    php_mess_detector: true
