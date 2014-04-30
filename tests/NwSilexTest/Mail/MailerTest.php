@@ -84,7 +84,9 @@ class MailerTest extends \PHPUnit_Framework_TestCase
         $swift  = $this->getMockBuilder('Swift_Mailer')->disableOriginalConstructor()->getMock();
         $swift->expects($this->once())
               ->method('send')
-              ->will($this->returnValue(false));
+              ->will($this->returnCallback(function($message, &$failedRecipients) {
+                    $failedRecipients = array('erro@foo.com'); return false;
+              }));
 
         $twig   = $this->getMock('Twig_Environment');
         $twig->expects($this->once())
