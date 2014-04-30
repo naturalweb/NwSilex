@@ -3,9 +3,6 @@ imports:
     - php
 
 tools:
-    external_code_coverage:
-        timeout: 900 # Timeout in seconds
-
     php_analyzer: true
     php_pdepend: true
     php_sim: true
