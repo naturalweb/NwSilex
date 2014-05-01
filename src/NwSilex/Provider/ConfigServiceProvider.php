@@ -12,7 +12,7 @@ class ConfigServiceProvider implements ServiceProviderInterface
             // Config
             $config = array();
             foreach (glob(APP_PATH."/config/*.php") as $path) {
-                if(file_exists($path) and is_file($path)) {
+                if(file_exists($path) && is_file($path)) {
                     $filename = pathinfo($path, PATHINFO_FILENAME);
                     $config[$filename] = isset($config[$filename]) ? $config[$filename] : array();
                     $config[$filename] = array_replace($config[$filename], (array) include $path);
@@ -20,7 +20,7 @@ class ConfigServiceProvider implements ServiceProviderInterface
             }
 
             foreach (glob(APP_PATH."/config/".$app['app.env']."/*.php") as $path) {
-                if(file_exists($path) and is_file($path)) {
+                if(file_exists($path) && is_file($path)) {
                     $filename = pathinfo($path, PATHINFO_FILENAME);
                     $config[$filename] = isset($config[$filename]) ? $config[$filename] : array();
                     $config[$filename] = array_replace($config[$filename], (array) include $path);

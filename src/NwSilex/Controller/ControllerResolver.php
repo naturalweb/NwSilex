@@ -12,7 +12,7 @@ class ControllerResolver extends BaseControllerResolver
         $callable = parent::getController($request);
         
         if (is_array($callable)) {
-	        if (isset($callable[0]) and $callable[0] instanceof ControllerInterface) {
+	        if (isset($callable[0]) && $callable[0] instanceof ControllerInterface) {
 	        	$callable[0]->setRequest($request);
 	        	$callable[0]->setApplication($this->app);
 	        }

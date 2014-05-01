@@ -115,8 +115,6 @@ class Mailer {
 		}
 		else
 		{
-			//$this->logMessage("Pretending to mail message", $message);
-
 			return 1;
 		}
 	}

@@ -98,7 +98,7 @@ class Application extends SilexApplication
      */
     public function session($key = null, $value = null)
     {
-        if (is_string($key) and !empty($key)) {
+        if (is_string($key) && !empty($key)) {
             if (is_null($value)) {
                 return $this['session']->get($key);
             }
