@@ -1,0 +1,1 @@
+<?php return array("bar" => "value_global");
