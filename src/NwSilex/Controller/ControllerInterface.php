@@ -2,7 +2,7 @@
 
 namespace NwSilex\Controller;
 
-use NwSilex\Foundation\Application;
+use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
 interface ControllerInterface
