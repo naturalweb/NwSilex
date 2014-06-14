@@ -31,6 +31,14 @@
         "psr-0": {
             "NwSilex": "src/"
         }
+    },
+    "suggest": {
+        "naturalweb/nwsilex-dropbox": ">=0.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2-dev"
+        }
     }
 }
 
